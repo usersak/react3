@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Color Picker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        .color-picker {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        button {
+            background-color: #0072bc;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .color-list {
+            display: none;
+        }
+
+        .color {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            margin: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="color-picker">
+        <button id="pickColorBtn">Pick a Color</button>
+        <div id="colorList" class="color-list">
+            <div class="color" style="background-color: red"></div>
+            <div class="color" style="background-color: green"></div>
+            <div class="color" style="background-color: blue"></div>
+            <div class="color" style="background-color: yellow"></div>
+            <div class="color" style="background-color: orange"></div>
+        </div>
+    </div>
+    <script>
+        const pickColorBtn = document.getElementById('pickColorBtn');
+        const colorList = document.getElementById('colorList');
+
+        // Toggle color list visibility when the button is clicked
+        pickColorBtn.addEventListener('click', () => {
+            if (colorList.style.display === 'none' || colorList.style.display === '') {
+                colorList.style.display = 'block';
+            } else {
+                colorList.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
